@@ -14,7 +14,6 @@ class The extends StatelessWidget {
     required this.mau,
     required this.tieudecons, required this.soluongs,
   });
-
   @override
   Widget build(BuildContext context) {
     return Container(

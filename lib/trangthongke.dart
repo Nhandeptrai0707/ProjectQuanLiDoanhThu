@@ -27,226 +27,228 @@ class _StateTrangThongKe extends State<TrangThongKe> {
       key: _scaffoldKey,
       drawer: Drawer(
           backgroundColor: Colors.blue,
-          child: SingleChildScrollView(
-            child: Column(
-              mainAxisAlignment: MainAxisAlignment.spaceBetween,
-              children: [
-                SizedBox(
-                  height: 30,
-                ),
-                Container(
-                  child: Row(
-                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                    children: [
-                      IconButton(
-                          onPressed: () {
-                            Navigator.of(context).pop();
+          child: SafeArea(
+            child: SingleChildScrollView(
+              child: Column(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                children: [
+                  SizedBox(
+                    height: 30,
+                  ),
+                  Container(
+                    child: Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                      children: [
+                        IconButton(
+                            onPressed: () {
+                              Navigator.of(context).pop();
+                            },
+                            icon: Icon(
+                              Icons.menu,
+                              color: Colors.white,
+                            )),
+                        IconButton(
+                            onPressed: () {},
+                            icon: Icon(
+                              Icons.arrow_forward,
+                              color: Colors.white,
+                            )),
+                      ],
+                    ),
+                  ),
+                  Container(
+                    height: 1,
+                    color: Colors.white,
+                  ),
+                  Container(
+                    child: Column(
+                      children: [
+                        ListTile(
+                          leading: Icon(
+                            Icons.home,
+                            color: _isSelected[0] ? Colors.yellow : Colors.white,
+                          ),
+                          title: Text(
+                            'Tổng quan',
+                            style: TextStyle(
+                              color:
+                                  _isSelected[0] ? Colors.yellow : Colors.white,
+                            ),
+                          ),
+                          onTap: () {
+                            setState(() {
+                              _isSelected[0] = !_isSelected[0];
+                              for (int i = 0; i < _isSelected.length; i++) {
+                                if (i != 0) {
+                                  _isSelected[i] = false;
+                                }
+                              }
+                            });
                           },
-                          icon: Icon(
-                            Icons.menu,
-                            color: Colors.white,
-                          )),
-                      IconButton(
-                          onPressed: () {},
-                          icon: Icon(
-                            Icons.arrow_forward,
-                            color: Colors.white,
-                          )),
-                    ],
+                        ),
+                        ListTile(
+                          leading: Icon(
+                            Icons.people,
+                            color: _isSelected[1] ? Colors.yellow : Colors.white,
+                          ),
+                          title: Text(
+                            'Khách hàng',
+                            style: TextStyle(
+                              color:
+                                  _isSelected[1] ? Colors.yellow : Colors.white,
+                            ),
+                          ),
+                          onTap: () {
+                            setState(() {
+                              _isSelected[1] = !_isSelected[1];
+                              for (int i = 0; i < _isSelected.length; i++) {
+                                if (i != 1) {
+                                  _isSelected[i] = false;
+                                }
+                              }
+                            });
+                          },
+                        ),
+                        ListTile(
+                          leading: Icon(
+                            Icons.card_giftcard,
+                            color: _isSelected[2] ? Colors.yellow : Colors.white,
+                          ),
+                          title: Text(
+                            'Khuyến mãi',
+                            style: TextStyle(
+                              color:
+                                  _isSelected[2] ? Colors.yellow : Colors.white,
+                            ),
+                          ),
+                          onTap: () {
+                            setState(() {
+                              _isSelected[2] = !_isSelected[2];
+                              for (int i = 0; i < _isSelected.length; i++) {
+                                if (i != 2) {
+                                  _isSelected[i] = false;
+                                }
+                              }
+                            });
+                          },
+                        ),
+                        ListTile(
+                          leading: Icon(
+                            Icons.area_chart,
+                            color: _isSelected[3] ? Colors.yellow : Colors.white,
+                          ),
+                          title: Text(
+                            'Báo cáo',
+                            style: TextStyle(
+                              color:
+                                  _isSelected[3] ? Colors.yellow : Colors.white,
+                            ),
+                          ),
+                          onTap: () {
+                            setState(() {
+                              _isSelected[3] = !_isSelected[3];
+                              for (int i = 0; i < _isSelected.length; i++) {
+                                if (i != 3) {
+                                  _isSelected[i] = false;
+                                }
+                              }
+                            });
+                          },
+                        ),
+                        ListTile(
+                          leading: Icon(
+                            Icons.settings,
+                            color: _isSelected[4] ? Colors.yellow : Colors.white,
+                          ),
+                          title: Text(
+                            'Thiết lập',
+                            style: TextStyle(
+                              color:
+                                  _isSelected[4] ? Colors.yellow : Colors.white,
+                            ),
+                          ),
+                          onTap: () {
+                            setState(() {
+                              _isSelected[4] = !_isSelected[4];
+                              for (int i = 0; i < _isSelected.length; i++) {
+                                if (i != 4) {
+                                  _isSelected[i] = false;
+                                }
+                              }
+                            });
+                          },
+                        ),
+                        ListTile(
+                          leading: Icon(
+                            Icons.contact_support,
+                            color: _isSelected[5] ? Colors.yellow : Colors.white,
+                          ),
+                          title: Text(
+                            'Hỗ trợ',
+                            style: TextStyle(
+                              color:
+                                  _isSelected[5] ? Colors.yellow : Colors.white,
+                            ),
+                          ),
+                          onTap: () {
+                            setState(() {
+                              _isSelected[5] = !_isSelected[5];
+                              for (int i = 0; i < _isSelected.length; i++) {
+                                if (i != 5) {
+                                  _isSelected[i] = false;
+                                }
+                              }
+                            });
+                          },
+                        ),
+                        ListTile(
+                          leading: Icon(
+                            Icons.notifications,
+                            color: _isSelected[6] ? Colors.yellow : Colors.white,
+                          ),
+                          title: Text(
+                            'Thông báo',
+                            style: TextStyle(
+                              color:
+                                  _isSelected[6] ? Colors.yellow : Colors.white,
+                            ),
+                          ),
+                          onTap: () {
+                            setState(() {
+                              _isSelected[6] = !_isSelected[6];
+                              for (int i = 0; i < _isSelected.length; i++) {
+                                if (i != 6) {
+                                  _isSelected[i] = false;
+                                }
+                              }
+                            });
+                          },
+                        ),
+                      ],
+                    ),
                   ),
-                ),
-                Container(
-                  height: 1,
-                  color: Colors.white,
-                ),
-                Container(
-                  child: Column(
-                    children: [
-                      ListTile(
-                        leading: Icon(
-                          Icons.home,
-                          color: _isSelected[0] ? Colors.yellow : Colors.white,
-                        ),
-                        title: Text(
-                          'Tổng quan',
-                          style: TextStyle(
-                            color:
-                                _isSelected[0] ? Colors.yellow : Colors.white,
-                          ),
-                        ),
-                        onTap: () {
-                          setState(() {
-                            _isSelected[0] = !_isSelected[0];
-                            for (int i = 0; i < _isSelected.length; i++) {
-                              if (i != 0) {
-                                _isSelected[i] = false;
-                              }
-                            }
-                          });
-                        },
-                      ),
-                      ListTile(
-                        leading: Icon(
-                          Icons.people,
-                          color: _isSelected[1] ? Colors.yellow : Colors.white,
-                        ),
-                        title: Text(
-                          'Khách hàng',
-                          style: TextStyle(
-                            color:
-                                _isSelected[1] ? Colors.yellow : Colors.white,
-                          ),
-                        ),
-                        onTap: () {
-                          setState(() {
-                            _isSelected[1] = !_isSelected[1];
-                            for (int i = 0; i < _isSelected.length; i++) {
-                              if (i != 1) {
-                                _isSelected[i] = false;
-                              }
-                            }
-                          });
-                        },
-                      ),
-                      ListTile(
-                        leading: Icon(
-                          Icons.card_giftcard,
-                          color: _isSelected[2] ? Colors.yellow : Colors.white,
-                        ),
-                        title: Text(
-                          'Khuyến mãi',
-                          style: TextStyle(
-                            color:
-                                _isSelected[2] ? Colors.yellow : Colors.white,
-                          ),
-                        ),
-                        onTap: () {
-                          setState(() {
-                            _isSelected[2] = !_isSelected[2];
-                            for (int i = 0; i < _isSelected.length; i++) {
-                              if (i != 2) {
-                                _isSelected[i] = false;
-                              }
-                            }
-                          });
-                        },
-                      ),
-                      ListTile(
-                        leading: Icon(
-                          Icons.area_chart,
-                          color: _isSelected[3] ? Colors.yellow : Colors.white,
-                        ),
-                        title: Text(
-                          'Báo cáo',
-                          style: TextStyle(
-                            color:
-                                _isSelected[3] ? Colors.yellow : Colors.white,
-                          ),
-                        ),
-                        onTap: () {
-                          setState(() {
-                            _isSelected[3] = !_isSelected[3];
-                            for (int i = 0; i < _isSelected.length; i++) {
-                              if (i != 3) {
-                                _isSelected[i] = false;
-                              }
-                            }
-                          });
-                        },
-                      ),
-                      ListTile(
-                        leading: Icon(
-                          Icons.settings,
-                          color: _isSelected[4] ? Colors.yellow : Colors.white,
-                        ),
-                        title: Text(
-                          'Thiết lập',
-                          style: TextStyle(
-                            color:
-                                _isSelected[4] ? Colors.yellow : Colors.white,
-                          ),
-                        ),
-                        onTap: () {
-                          setState(() {
-                            _isSelected[4] = !_isSelected[4];
-                            for (int i = 0; i < _isSelected.length; i++) {
-                              if (i != 4) {
-                                _isSelected[i] = false;
-                              }
-                            }
-                          });
-                        },
-                      ),
-                      ListTile(
-                        leading: Icon(
-                          Icons.contact_support,
-                          color: _isSelected[5] ? Colors.yellow : Colors.white,
-                        ),
-                        title: Text(
-                          'Hỗ trợ',
-                          style: TextStyle(
-                            color:
-                                _isSelected[5] ? Colors.yellow : Colors.white,
-                          ),
-                        ),
-                        onTap: () {
-                          setState(() {
-                            _isSelected[5] = !_isSelected[5];
-                            for (int i = 0; i < _isSelected.length; i++) {
-                              if (i != 5) {
-                                _isSelected[i] = false;
-                              }
-                            }
-                          });
-                        },
-                      ),
-                      ListTile(
-                        leading: Icon(
-                          Icons.notifications,
-                          color: _isSelected[6] ? Colors.yellow : Colors.white,
-                        ),
-                        title: Text(
-                          'Thông báo',
-                          style: TextStyle(
-                            color:
-                                _isSelected[6] ? Colors.yellow : Colors.white,
-                          ),
-                        ),
-                        onTap: () {
-                          setState(() {
-                            _isSelected[6] = !_isSelected[6];
-                            for (int i = 0; i < _isSelected.length; i++) {
-                              if (i != 6) {
-                                _isSelected[i] = false;
-                              }
-                            }
-                          });
-                        },
-                      ),
-                    ],
+                  Container(
+                    height: 1,
+                    color: Colors.white,
                   ),
-                ),
-                Container(
-                  height: 1,
-                  color: Colors.white,
-                ),
-                Container(
-                  child: SizedBox(
-                    height: 200,
+                  Container(
+                    child: SizedBox(
+                      height: 200,
+                    ),
                   ),
-                ),
-                ListTile(
-                  leading: Icon(Icons.logout, color: Colors.white),
-                  title: Text(
-                    'Đăng xuất',
-                    style: TextStyle(color: Colors.white),
-                  ),
-                  onTap: () {
-                    ScaffoldMessenger.of(context)
-                        .showSnackBar(SnackBar(content: Text('Đăng Xuất')));
-                  },
-                )
-              ],
+                  ListTile(
+                    leading: Icon(Icons.logout, color: Colors.white),
+                    title: Text(
+                      'Đăng xuất',
+                      style: TextStyle(color: Colors.white),
+                    ),
+                    onTap: () {
+                      ScaffoldMessenger.of(context)
+                          .showSnackBar(SnackBar(content: Text('Đăng Xuất')));
+                    },
+                  )
+                ],
+              ),
             ),
           )),
       body: SafeArea(
