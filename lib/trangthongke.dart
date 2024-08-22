@@ -1,7 +1,6 @@
-import 'dart:ffi';
 
+import 'package:appquanli/DoanhThu.dart';
 import 'package:appquanli/ListThongBao.dart';
-import 'package:fl_chart/fl_chart.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'chart.dart';
@@ -48,7 +47,9 @@ class _StateTrangThongKe extends State<TrangThongKe> {
                               color: Colors.white,
                             )),
                         IconButton(
-                            onPressed: () {},
+                            onPressed: () {
+                              Navigator.of(context).pop();
+                            },
                             icon: Icon(
                               Icons.arrow_forward,
                               color: Colors.white,
@@ -83,6 +84,7 @@ class _StateTrangThongKe extends State<TrangThongKe> {
                                   _isSelected[i] = false;
                                 }
                               }
+                              Navigator.pushReplacement(context, MaterialPageRoute(builder: (context)=>TrangThongKe()));
                             });
                           },
                         ),
@@ -106,6 +108,12 @@ class _StateTrangThongKe extends State<TrangThongKe> {
                                   _isSelected[i] = false;
                                 }
                               }
+                              ScaffoldMessenger.of(context).showSnackBar(
+                                SnackBar(
+                                  content: Text("Trang khách hàng"),
+                                  duration: Duration(seconds: 2),
+                                ),
+                              );
                             });
                           },
                         ),
@@ -129,6 +137,12 @@ class _StateTrangThongKe extends State<TrangThongKe> {
                                   _isSelected[i] = false;
                                 }
                               }
+                              ScaffoldMessenger.of(context).showSnackBar(
+                                SnackBar(
+                                  content: Text("Trang khuyến mãi"),
+                                  duration: Duration(seconds: 2),
+                                ),
+                              );
                             });
                           },
                         ),
@@ -152,6 +166,12 @@ class _StateTrangThongKe extends State<TrangThongKe> {
                                   _isSelected[i] = false;
                                 }
                               }
+                              ScaffoldMessenger.of(context).showSnackBar(
+                                SnackBar(
+                                  content: Text("Trang báo cáo"),
+                                  duration: Duration(seconds: 2),
+                                ),
+                              );
                             });
                           },
                         ),
@@ -175,6 +195,12 @@ class _StateTrangThongKe extends State<TrangThongKe> {
                                   _isSelected[i] = false;
                                 }
                               }
+                              ScaffoldMessenger.of(context).showSnackBar(
+                                SnackBar(
+                                  content: Text("Trang thiết lập"),
+                                  duration: Duration(seconds: 2),
+                                ),
+                              );
                             });
                           },
                         ),
@@ -198,6 +224,12 @@ class _StateTrangThongKe extends State<TrangThongKe> {
                                   _isSelected[i] = false;
                                 }
                               }
+                              ScaffoldMessenger.of(context).showSnackBar(
+                                SnackBar(
+                                  content: Text("Trang hỗ trợ"),
+                                  duration: Duration(seconds: 2),
+                                ),
+                              );
                             });
                           },
                         ),
@@ -221,6 +253,12 @@ class _StateTrangThongKe extends State<TrangThongKe> {
                                   _isSelected[i] = false;
                                 }
                               }
+                              ScaffoldMessenger.of(context).showSnackBar(
+                                SnackBar(
+                                  content: Text("Trang thông báo"),
+                                  duration: Duration(seconds: 2),
+                                ),
+                              );
                             });
                           },
                         ),
@@ -251,58 +289,51 @@ class _StateTrangThongKe extends State<TrangThongKe> {
               ),
             ),
           )),
+      appBar: AppBar(
+        leading:  IconButton(
+            onPressed: () {
+              setState(() {
+                _scaffoldKey.currentState?.openDrawer();
+              });
+            },
+            icon: Icon(
+              Icons.menu,
+              color: Colors.blue,
+            )),
+        title: Container(
+          height: 40,
+          decoration: BoxDecoration(
+            color: Colors.white10,
+            borderRadius: BorderRadius.circular(20),
+            border: Border.all(color: Colors.grey, width: 2),
+          ),
+          child: TextField(
+            decoration: InputDecoration(
+              hintStyle: TextStyle(color: Colors.grey),
+              hintText: 'Tìm Kiếm',
+              border: InputBorder.none,
+              prefixIcon: Icon(Icons.search, color: Colors.grey),
+              contentPadding:
+              EdgeInsets.symmetric(vertical: 10.0),
+            ),
+          ),
+        ),
+        actions: [
+          IconButton(
+              onPressed: () {
+                ScaffoldMessenger.of(context).showSnackBar(
+                    SnackBar(content: Text('Tin Nhắn')));
+              },
+              icon: Icon(
+                Icons.messenger,
+                color: Colors.blue,
+              ))
+        ],
+      ),
       body: SafeArea(
         child: SingleChildScrollView(
           child: Column(
             children: [
-              SizedBox(
-                height: 15,
-              ),
-              Container(
-                child: Row(
-                  children: [
-                    IconButton(
-                        onPressed: () {
-                          setState(() {
-                            _scaffoldKey.currentState?.openDrawer();
-                          });
-                        },
-                        icon: Icon(
-                          Icons.menu,
-                          color: Colors.blue,
-                        )),
-                    Flexible(
-                      child: Container(
-                        height: 40,
-                        decoration: BoxDecoration(
-                          color: Colors.white10,
-                          borderRadius: BorderRadius.circular(20),
-                          border: Border.all(color: Colors.grey, width: 2),
-                        ),
-                        child: TextField(
-                          decoration: InputDecoration(
-                            hintStyle: TextStyle(color: Colors.grey),
-                            hintText: 'Tìm Kiếm',
-                            border: InputBorder.none,
-                            prefixIcon: Icon(Icons.search, color: Colors.grey),
-                            contentPadding:
-                                EdgeInsets.symmetric(vertical: 10.0),
-                          ),
-                        ),
-                      ),
-                    ),
-                    IconButton(
-                        onPressed: () {
-                          ScaffoldMessenger.of(context).showSnackBar(
-                              SnackBar(content: Text('Tin Nhắn')));
-                        },
-                        icon: Icon(
-                          Icons.messenger,
-                          color: Colors.blue,
-                        ))
-                  ],
-                ),
-              ),
               SizedBox(
                 height: 10,
               ),
@@ -409,12 +440,14 @@ class _StateTrangThongKe extends State<TrangThongKe> {
               ),
               SizedBox(height: 10,),
               ElevatedButton(
-                onPressed: (){},
+                onPressed: (){
+                  Navigator.pushReplacement(context, MaterialPageRoute(builder: (context)=>DoanhThu()));
+                },
                 child: Text('Chi tiết',style: TextStyle(fontWeight: FontWeight.bold),),
                 style: ElevatedButton.styleFrom(primary: Colors.blue.shade900,onPrimary: Colors.white),),
               Row(children: [Expanded(child: Container(color: Colors.grey,height: 1,width: 100,)),SizedBox(width: 10,),Text('Thông báo',textAlign: TextAlign.center,style: TextStyle(color: Colors.blue.shade900,fontWeight: FontWeight.bold,fontSize: 15),),SizedBox(width: 10,),Expanded(child: Container(color: Colors.grey,height: 1,width: 100,))],),
               Row(children: [
-                Expanded(child: Text('Chưa đọc(10)')),
+                Expanded(child: Text("Chưa đọc("+thongbaos.length.toString()+")")),
                 IconButton(
                   onPressed: (){},
                   icon: Icon(Icons.more_horiz,color: Colors.grey,),

@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+
 // import 'package:appquanli/trangthongke.dart';
 import 'package:appquanli/sign_up_screen.dart';
 import 'package:appquanli/gioithieu.dart';
@@ -58,7 +59,8 @@ class _SignInScreenState extends State<SignInScreen> {
                   labelText: 'Email',
                   enabledBorder: OutlineInputBorder(
                     borderRadius: BorderRadius.circular(10.0),
-                    borderSide: BorderSide(color: Colors.grey[400]!, width: 1.0),
+                    borderSide:
+                        BorderSide(color: Colors.grey[400]!, width: 1.0),
                   ),
                   focusedBorder: OutlineInputBorder(
                     borderRadius: BorderRadius.circular(10.0),
@@ -66,7 +68,8 @@ class _SignInScreenState extends State<SignInScreen> {
                   ),
                   filled: true,
                   fillColor: Colors.grey[200],
-                  contentPadding: EdgeInsets.symmetric(horizontal: 16.0, vertical: 12.0),
+                  contentPadding:
+                      EdgeInsets.symmetric(horizontal: 16.0, vertical: 12.0),
                 ),
               ),
               SizedBox(height: 10.0),
@@ -76,7 +79,8 @@ class _SignInScreenState extends State<SignInScreen> {
                   labelText: 'Password',
                   enabledBorder: OutlineInputBorder(
                     borderRadius: BorderRadius.circular(10.0),
-                    borderSide: BorderSide(color: Colors.grey[400]!, width: 1.0),
+                    borderSide:
+                        BorderSide(color: Colors.grey[400]!, width: 1.0),
                   ),
                   focusedBorder: OutlineInputBorder(
                     borderRadius: BorderRadius.circular(10.0),
@@ -84,7 +88,8 @@ class _SignInScreenState extends State<SignInScreen> {
                   ),
                   filled: true,
                   fillColor: Colors.grey[200],
-                  contentPadding: EdgeInsets.symmetric(horizontal: 16.0, vertical: 12.0),
+                  contentPadding:
+                      EdgeInsets.symmetric(horizontal: 16.0, vertical: 12.0),
                 ),
               ),
               SizedBox(height: 18.0),
@@ -92,11 +97,14 @@ class _SignInScreenState extends State<SignInScreen> {
                 onPressed: () {
                   Navigator.pushReplacement(
                     context,
-                    MaterialPageRoute(builder: (context) => GioiThieu()), // Cập nhật trang đến GioiThieu
+                    MaterialPageRoute(
+                        builder: (context) =>
+                            GioiThieu()), // Cập nhật trang đến GioiThieu
                   );
                 },
                 style: ButtonStyle(
-                  backgroundColor: MaterialStateProperty.all<Color>(Colors.blue),
+                  backgroundColor:
+                      MaterialStateProperty.all<Color>(Colors.blue),
                   shape: MaterialStateProperty.all<RoundedRectangleBorder>(
                     RoundedRectangleBorder(
                       borderRadius: BorderRadius.circular(10.0),
@@ -129,7 +137,8 @@ class _SignInScreenState extends State<SignInScreen> {
                 onPressed: () {},
                 style: TextButton.styleFrom(
                   backgroundColor: Colors.grey[200],
-                  padding: EdgeInsets.symmetric(vertical: 12.0, horizontal: 20.0),
+                  padding:
+                      EdgeInsets.symmetric(vertical: 12.0, horizontal: 20.0),
                   shape: RoundedRectangleBorder(
                     borderRadius: BorderRadius.circular(10.0),
                   ),
@@ -154,7 +163,8 @@ class _SignInScreenState extends State<SignInScreen> {
                 onPressed: () {},
                 style: TextButton.styleFrom(
                   backgroundColor: Colors.grey[200],
-                  padding: EdgeInsets.symmetric(vertical: 12.0, horizontal: 20.0),
+                  padding:
+                      EdgeInsets.symmetric(vertical: 12.0, horizontal: 20.0),
                   shape: RoundedRectangleBorder(
                     borderRadius: BorderRadius.circular(10.0),
                   ),

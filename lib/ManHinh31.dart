@@ -62,9 +62,7 @@ Widget build(BuildContext context) {
                     );
                   }).toList(),
                   onChanged: (String? newValue) {
-                    setState() {
                       _selectedValue = newValue;
-                    };
                   },
                   validator: (value) {
                     if (value == null) {
@@ -92,9 +90,7 @@ Widget build(BuildContext context) {
                     );
                   }).toList(),
                   onChanged: (String? newValue) {
-                    setState() {
                       _selectedValue = newValue;
-                    };
                   },
                   validator: (value) {
                     if (value == null) {
@@ -122,9 +118,7 @@ Widget build(BuildContext context) {
                     );
                   }).toList(),
                   onChanged: (String? newValue) {
-                    setState() {
                       _selectedValue = newValue;
-                    };
                   },
                   validator: (value) {
                     if (value == null) {

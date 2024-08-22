@@ -36,7 +36,7 @@ class _GioiThieuState extends State<GioiThieu> {
                 style: TextStyle(
                   fontSize: 25,
                   fontWeight: FontWeight.bold,
-                  color: Colors.blue,
+                  color: Colors.blue.shade900,
                 ),
                 textAlign: TextAlign.center,
               ),
